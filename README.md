@@ -1,6 +1,6 @@
 <div align="center">
 
-<h2> (서비스소개,한줄) </h2>
+<!-- <h2> (서비스소개,한줄) </h2> -->
 
 <!-- <img src=""  alt="서비스대표-이미지" /> -->
 
@@ -14,19 +14,19 @@
             <a href="">
                 <img src="https://github.com/32nd-GO-SOPT-SOPKATHON-11/SOPKATHON-11-iOS/assets/109775321/88f93653-0282-4d13-8d1c-47e503b97ec3" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b>chaentopia</b>
+              <b> chaentopia </b>
             </a>
         </td>
       <td style="min-width: 150px;">
             <a href="">
               <img src="https://github.com/32nd-GO-SOPT-SOPKATHON-11/SOPKATHON-11-iOS/assets/109775321/9b998867-c824-47d9-bdb1-51edad1ede65" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b> ahra1221</b>
+              <b>ahra1221</b>
             </a>
         </td>
       <td style="min-width: 150px;">
             <a href="">
-              <img src="https://github.com/32nd-GO-SOPT-SOPKATHON-11/SOPKATHON-11-iOS/assets/109775321/1efffa16-3275-48fe-b8f1-edfff5c262ed" width="200" alt="깃허브계정-프로필사진">
+              <img src="https://github.com/32nd-GO-SOPT-SOPKATHON-11/SOPKATHON-11-iOS/assets/109775321/9d6cfc0f-5c95-4849-b491-872074e2ed13" width="200" alt="깃허브계정-프로필사진">
               <br />
               <b>seongmin221</b>
             </a>
@@ -35,7 +35,7 @@
             <a href="">
               <img src="https://github.com/32nd-GO-SOPT-SOPKATHON-11/SOPKATHON-11-iOS/assets/109775321/606be2da-3692-47df-ac9f-919de4fa8928" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b>cjs1399</b>
+              <b>cjs1399]</b>
             </a>
         </td>
     </tr>
