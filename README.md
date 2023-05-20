@@ -72,14 +72,14 @@
 <h2>  📄 컨벤션 및 브랜치 전략 </h2>
 <!-- (노션 링크 또는 표로 작성) -->
 
-<a href="" />
+<!-- <a href="" /> -->
 
 | 제목        | 내용                                                                             |
 | ----------- | -------------------------------------------------------------------------------- |
-| 코드 컨벤션 | https://merciful-goldenrod-955.notion.site/Code-Convention-943a673afe8b46c68c386c1148e4e9bb |
-| 깃 컨벤션 | https://merciful-goldenrod-955.notion.site/Git-Convention-d1a6272fa1c34643962f625d6e5ae89b |
-| 라이브러리 | https://merciful-goldenrod-955.notion.site/Library-d7bf02c17e054bd489a731f4cb4f5003 |
-| UI설계도 | https://merciful-goldenrod-955.notion.site/UI-4c9c6798f7d144f8a2f6f5443611119c) |
+| 코드 컨벤션 | [노션 링크](https://merciful-goldenrod-955.notion.site/Code-Convention-943a673afe8b46c68c386c1148e4e9bb) |
+| 깃 컨벤션 | [노션 링크](https://merciful-goldenrod-955.notion.site/Git-Convention-d1a6272fa1c34643962f625d6e5ae89b) |
+| 라이브러리 | [노션 링크](https://merciful-goldenrod-955.notion.site/Library-d7bf02c17e054bd489a731f4cb4f5003) |
+| UI설계도 | [노션 링크](https://merciful-goldenrod-955.notion.site/UI-4c9c6798f7d144f8a2f6f5443611119c) |
 
 <br/>
 
