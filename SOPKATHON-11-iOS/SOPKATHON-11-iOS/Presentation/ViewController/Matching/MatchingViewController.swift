@@ -14,15 +14,23 @@ class MatchingViewController: UIViewController {
     
     private let titleLabel = UILabel().then {
         $0.text = "000님을 선택한 분들이에요!"
+        $0.font = .systemFont(ofSize: 18)
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 1)
+        $0.layer.shadowOpacity = 0.11
+        $0.layer.masksToBounds = false
     }
     
     private let matchingLabel = UILabel().then {
         $0.text = "매칭인원"
+        $0.font = .boldSystemFont(ofSize: 20)
     }
     
     private var matchingCountLabel = UILabel().then {
         $0.text = "4명"
         $0.textColor = .gray
+        $0.font = .boldSystemFont(ofSize: 20)
     }
     
     lazy var matchingFlowLayout = UICollectionViewFlowLayout().then {
@@ -61,24 +69,24 @@ extension MatchingViewController {
             matchingCollectionView)
         
         titleLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(63)
             $0.centerX.equalToSuperview()
         }
         
         matchingLabel.snp.makeConstraints{
-            $0.top.equalTo(titleLabel.snp.bottom).offset(20)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(25)
             $0.leading.equalToSuperview().offset(20)
         }
         
         matchingCountLabel.snp.makeConstraints{
             $0.top.equalTo(matchingLabel)
-            $0.leading.equalTo(matchingLabel.snp.trailing).offset(20)
+            $0.leading.equalTo(matchingLabel.snp.trailing).offset(6)
         }
         
         matchingCollectionView.snp.makeConstraints{
-            $0.top.equalTo(titleLabel.snp.bottom).offset(50)
-            $0.width.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.top.equalTo(matchingLabel.snp.bottom).offset(7)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview().inset(83)
             $0.centerX.equalToSuperview()
         }
     }
@@ -86,19 +94,19 @@ extension MatchingViewController {
 
 extension MatchingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 50
+        return 22
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width - 20) / 2, height: (UIScreen.main.bounds.width - 20) / 2)
+        return CGSize(width: 162, height: 254)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 11
         
     }
     

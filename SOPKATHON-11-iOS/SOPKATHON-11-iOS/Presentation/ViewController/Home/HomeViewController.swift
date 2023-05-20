@@ -13,8 +13,15 @@ import Then
 final class HomeViewController: UIViewController {
     
     private let titleLabel = UILabel().then {
-        $0.text = "누가 마음에 쏙 들어왔슈?"
-        $0.font = .systemFont(ofSize: 18)
+        $0.text = "누가 마음에 쏙\n들어왔슈?"
+        let font = UIFont.boldSystemFont(ofSize: 26)
+        $0.numberOfLines = 2
+        $0.font = .systemFont(ofSize: 26)
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 1)
+        $0.layer.shadowOpacity = 0.11
+        $0.layer.masksToBounds = false
     }
     
     lazy var logoImage = UIImageView().then {
@@ -46,16 +53,23 @@ final class HomeViewController: UIViewController {
 extension HomeViewController {
     private func setStyle() {
         view.backgroundColor = .white
+        
+        
+        guard let text = self.titleLabel.text else { return }
+        let attributeString = NSMutableAttributedString(string: text)
+        let font = UIFont.boldSystemFont(ofSize: 26)
+        attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "쏙"))
+        self.titleLabel.attributedText = attributeString
     }
     
     private func setLayout() {
         view.addSubviews(
             titleLabel,
             logoImage,
-        homeCollectionView)
+            homeCollectionView)
         
         titleLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(100)
+            $0.top.equalToSuperview().offset(64)
             $0.leading.equalToSuperview().offset(20)
         }
         
@@ -68,7 +82,6 @@ extension HomeViewController {
         homeCollectionView.snp.makeConstraints{
             $0.top.equalTo(titleLabel.snp.bottom).offset(35)
             $0.leading.trailing.equalToSuperview().inset(20)
-//            $0.width.equalToSuperview()
             $0.bottom.equalToSuperview().inset(83)
             $0.centerX.equalToSuperview()
         }

@@ -17,7 +17,6 @@ final class HomeCollectionViewCell: UICollectionViewCell {
     let profileImageView = UIImageView().then {
         //        $0.image = UIImage(systemName: "figure.bowling")
         $0.backgroundColor = .gray
-        
         $0.layer.cornerRadius = 6
         $0.clipsToBounds = true
     }
