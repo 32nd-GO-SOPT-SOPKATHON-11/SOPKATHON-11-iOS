@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MY-SOPT-IN-iOS
+//  SOPKATHON-11-iOS
 //
-//  Created by 김다예 on 2023/05/15.
+//  Created by 천성우 on 2023/05/21.
 //
 
 import UIKit
