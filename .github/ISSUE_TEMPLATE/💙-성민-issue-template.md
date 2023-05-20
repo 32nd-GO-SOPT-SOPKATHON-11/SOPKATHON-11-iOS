@@ -1,8 +1,8 @@
 ---
-name: "\U0001FA75 성민 issue template"
+name: "💙 성민 issue template"
 about: seongmin221의 새로운 이슈 추가
 title: "[Feat] description"
-labels: "\U0001FA75 성민"
+labels: "💙 성민"
 assignees: seongmin221
 
 ---
