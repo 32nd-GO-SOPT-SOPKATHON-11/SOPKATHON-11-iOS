@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  SOPKATHON-11-iOS
+//  MY-SOPT-IN-iOS
 //
-//  Created by 천성우 on 2023/05/17.
+//  Created by 김다예 on 2023/05/15.
 //
 
 import UIKit
@@ -13,19 +13,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        
-        // MARK: - 1. 현재의 scene이 UIWindowScene인지 확인.
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        // MARK: - 2. 앱 내부에서 사용할 UIWindow를 생성한다. 이는 이후 앱의 뷰 계층 구조를 관리하는데 사용할 수 있다.
+        let navigationController = UINavigationController(rootViewController: TabBarViewController())
         self.window = UIWindow(windowScene: windowScene)
-        
-        // MARK: - 3. 이 과정에서 생성된 UINavigationController는 앱 뷰 컨트롤러를 관리하는 데 사용되며 rootViewController는 앱의 뷰 계층 구조에서 최상위 view 컨드롤러 입니다.
-        
-        let navigationController = UINavigationController(rootViewController: ViewController())
         self.window?.rootViewController = navigationController
-        
-        // MARK: - 4. UIWindow를 화면에 표시하도록 설정하는 것.
         self.window?.makeKeyAndVisible()
     }
+    
+    func sceneDidDisconnect(_ scene: UIScene) {
+        // Called as the scene is being released by the system.
+        // This occurs shortly after the scene enters the background, or when its session is discarded.
+        // Release any resources associated with this scene that can be re-created the next time the scene connects.
+        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+    }
+    
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        // Called when the scene has moved from an inactive state to an active state.
+        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    }
+    
+    func sceneWillResignActive(_ scene: UIScene) {
+        // Called when the scene will move from an active state to an inactive state.
+        // This may occur due to temporary interruptions (ex. an incoming phone call).
+    }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        // Called as the scene transitions from the background to the foreground.
+        // Use this method to undo the changes made on entering the background.
+    }
+    
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        // Called as the scene transitions from the foreground to the background.
+        // Use this method to save data, release shared resources, and store enough scene-specific state information
+        // to restore the scene back to its current state.
+    }
+    
+    
 }
+
