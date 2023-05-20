@@ -19,6 +19,10 @@ class MatchingListViewController: UIViewController {
         $0.isScrollEnabled = false
     }
     
+    private let subTitleLabel = UILabel().then{
+        $0.text = "미션리스트 5가지"
+    }
+    
     private let moreButton = UIButton().then{
         $0.setTitle("미션 더보기", for: .normal)
     }
@@ -38,6 +42,7 @@ class MatchingListViewController: UIViewController {
         view.addSubviews(
             profileView,
             tableView,
+            subTitleLabel,
             moreButton
         )
         
@@ -51,6 +56,11 @@ class MatchingListViewController: UIViewController {
             $0.bottom.equalToSuperview().inset(130)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(400)
+        }
+        
+        subTitleLabel.snp.makeConstraints{
+            $0.bottom.equalTo(tableView.snp.top).offset(-13)
+            $0.leading.equalTo(tableView.snp.leading)
         }
         
         moreButton.snp.makeConstraints{

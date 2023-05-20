@@ -14,9 +14,40 @@ class MatchingListView: UIView{
     
     // MARK: Component
     
-    private let profileImage = UIImageView().then{
-        $0.backgroundColor = .red
-    }
+    //    private let profileImage = UIImageView().then{
+    //        $0.backgroundColor = .red
+    //        $0.layer.cornerRadius = $0.fram.height/2
+    //
+    //    }
+    
+    private let profileImage: UIImageView = {
+        let image = UIImageView()
+        image.backgroundColor = .red
+        image.layer.cornerRadius = image.frame.height/2
+        image.layer.borderWidth = 1
+        image.clipsToBounds = true
+        return image
+    }()
+    
+    
+    //    private let nameLabel: UILabel = {
+    //        let label = UILabel()
+    //        label.text = "이름이 무엇인가요!?"
+    //        label.font = .systemFont(ofSize: 16)
+    //        label.textColor = .blue
+    //        label.textAlignment = .center
+    //        return label
+    //    }()
+    
+    
+    
+    //    cell.userImageView.layer.cornerRadius = cell.userImageView.frame.height/2
+    //    cell.userImageView.layer.borderWidth = 1
+    //    cell.userImageView.layer.borderColor = UIColor.clear.cgColor
+    //    // 뷰의 경계에 맞춰준다
+    //    cell.userImageView.clipsToBounds = true
+    
+    
     
     private let profileName = UILabel().then{
         $0.text = "여민서"
@@ -55,8 +86,8 @@ class MatchingListView: UIView{
         profileImage.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(68)
-            $0.width.equalTo(200)
-            $0.height.equalTo(200)
+            $0.width.equalTo(150)
+            $0.height.equalTo(150)
         }
         
         profileName.snp.makeConstraints{
