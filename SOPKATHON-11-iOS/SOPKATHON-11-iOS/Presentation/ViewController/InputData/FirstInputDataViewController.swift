@@ -42,7 +42,7 @@ final class FirstInputDataViewController: BaseViewController {
         
         setDelegate()
         setPHPickerAction()
-        
+        setNextButtonAction()
     }
     
     // MARK: - Setting
@@ -60,10 +60,21 @@ final class FirstInputDataViewController: BaseViewController {
         baseView.addImageViewAction(action)
     }
     
+    private func setNextButtonAction() {
+        let action = UIAction { [weak self] _ in
+            self?.presentSecondInputDataViewController()
+        }
+        baseView.nextButton.addAction(action, for: .touchUpInside)
+    }
+    
     // MARK: - Action Helper
     
     private func presentPHPicker() {
         self.present(picker, animated: true)
+    }
+    
+    private func presentSecondInputDataViewController() {
+        navigationController?.pushViewController(SecondInputDataViewController(), animated: true)
     }
     
 }

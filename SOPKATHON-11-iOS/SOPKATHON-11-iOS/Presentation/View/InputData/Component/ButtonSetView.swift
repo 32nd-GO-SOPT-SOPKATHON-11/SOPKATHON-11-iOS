@@ -26,10 +26,11 @@ final class ButtonSetView: BaseView {
         let action = UIAction { [weak self] _ in
             self?.leftButtonTouched()
         }
-        // TODO: title 관련 사항 변경
-        // TODO: button 색상 변경
         button.setTitle("남자", for: .normal)
-        button.backgroundColor = .gray
+        button.setTitleColor(.init(hex: "#9D9D9D"), for: .normal)
+        button.setBorder(color: .init(hex: "#9D9D9D"), andWidth: 1)
+        button.setCornerRadius(to: 6)
+        button.backgroundColor = .white
         button.addAction(action, for: .touchUpInside)
         return button
     }()
@@ -39,10 +40,11 @@ final class ButtonSetView: BaseView {
         let action = UIAction { [weak self] _ in
             self?.rightButtonTouched()
         }
-        // TODO: title 관련 사항 변경
-        // TODO: button 색상 변경
         button.setTitle("여자", for: .normal)
-        button.backgroundColor = .gray
+        button.setTitleColor(.init(hex: "#9D9D9D"), for: .normal)
+        button.setBorder(color: .init(hex: "#9D9D9D"), andWidth: 1)
+        button.setCornerRadius(to: 6)
+        button.backgroundColor = .white
         button.addAction(action, for: .touchUpInside)
         return button
     }()
@@ -77,8 +79,12 @@ final class ButtonSetView: BaseView {
     }
     
     private func configureButtons() {
-        leftButton.backgroundColor = isLeftChosen ? .black : .gray
-        rightButton.backgroundColor = isRightChosen ? .black : .gray
+        leftButton.backgroundColor = isLeftChosen ? .pink1 : .white
+        rightButton.backgroundColor = isRightChosen ? .pink1 : .white
+        leftButton.setBorder(color: isLeftChosen ? .pink1 : .init(hex: "#9D9D9D"), andWidth: 1)
+        rightButton.setBorder(color: isRightChosen ? .pink1 : .init(hex: "#9D9D9D"), andWidth: 1)
+        leftButton.setTitleColor(isLeftChosen ? .white : .init(hex: "#9D9D9D"), for: .normal)
+        rightButton.setTitleColor(isRightChosen ? .white : .init(hex: "#9D9D9D"), for: .normal)
     }
     
     private func leftButtonTouched() {
