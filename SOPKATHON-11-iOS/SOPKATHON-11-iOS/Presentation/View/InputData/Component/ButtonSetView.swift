@@ -11,7 +11,7 @@ import SnapKit
 
 final class ButtonSetView: BaseView {
     
-    // TODO: 앞으로 할 일을 TODO로 적어두기 -> 나중에 꼭 지우기
+    // TODO: UI 변경
     
     // MARK: Variables
     
@@ -19,11 +19,7 @@ final class ButtonSetView: BaseView {
     
     private var isRightChosen: Bool = false
     
-    // MARK: Constants
-    
-    // MARK: Property
-    
-    // MARK: Component (button, label 등 코드로 만들때)
+    // MARK: Component
     
     private lazy var leftButton: UIButton = {
         let button = UIButton()
@@ -90,14 +86,4 @@ final class ButtonSetView: BaseView {
         configureButtons()
     }
 
-    // MARK: Objc Function
-
-
-    // MARK: - extension
-
-    // delegate 꼭 Extension 빼기, 마크 주석 달아주기!!
-    // MARK: UICollectionViewDelegateFlowLayout
-
-    // MARK: UICollectionViewDataSource
-    
 }
