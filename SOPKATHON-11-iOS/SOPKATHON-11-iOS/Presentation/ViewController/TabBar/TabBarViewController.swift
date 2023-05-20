@@ -30,7 +30,7 @@ class TabBarViewController: UITabBarController{
 
     private func setStyle() {
         self.tabBar.backgroundColor = .white
-        self.tabBar.tintColor = .black
+        self.tabBar.tintColor = .pink1
         self.tabBar.unselectedItemTintColor = .gray
         /// tintColor, selected Color set
         /// unselectedItemTintColor, unselected Color set
@@ -44,11 +44,11 @@ class TabBarViewController: UITabBarController{
         homeNavigationController.setNavigationBarHidden(true, animated: true)
 
         let matchinglistViewController = MatchingListViewController()
-        matchinglistViewController.view.backgroundColor = .gray
+//        matchinglistViewController.view.backgroundColor = .gray
         
 //        let matchinglistViewController = MatchingViewController()
-//        matchinglistViewController.view.backgroundColor = .white
-        matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "list.clipboard"), tag: 1)
+        matchinglistViewController.view.backgroundColor = .white
+        matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "heart.fill"), tag: 1)
         let matchinglistNavigationController = UINavigationController(rootViewController: matchinglistViewController)
 
         viewControllers = [homeNavigationController,
