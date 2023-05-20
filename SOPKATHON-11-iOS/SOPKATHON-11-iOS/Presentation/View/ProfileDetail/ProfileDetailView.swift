@@ -142,6 +142,10 @@ extension ProfileDetailView {
             $0.backgroundColor = .lightGray
         }
         
+        profileHobbyTitle.do {
+            $0.text = "취미"
+        }
+        
     }
     
     func setHierarchy() {
@@ -165,17 +169,18 @@ extension ProfileDetailView {
         
         scrollView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
-            $0.horizontalEdges.bottom.equalToSuperview()
+            $0.leading.trailing.bottom.equalToSuperview()
         }
         
         contentView.snp.makeConstraints {
-             $0.edges.equalTo(scrollView.contentLayoutGuide)
-             $0.width.equalTo(scrollView.frameLayoutGuide)
-             $0.height.equalTo(1200)
+            $0.top.equalTo(scrollView.snp.top)
+            // $0.edges.equalToSuperview()
+            $0.height.equalTo(1200)
+            $0.bottom.equalToSuperview().inset(10)
         }
         
         profileImage.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.top.equalTo(contentView.snp.top)
             $0.leading.trailing.equalToSuperview()
             $0.width.equalTo(375)
             $0.height.equalTo(355)
@@ -254,7 +259,7 @@ extension ProfileDetailView {
         }
         
         profileHobbyTitle.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(10)
+            $0.top.equalTo(lineView2.snp.bottom).offset(24)
             $0.leading.equalToSuperview().inset(24)
         }
         
