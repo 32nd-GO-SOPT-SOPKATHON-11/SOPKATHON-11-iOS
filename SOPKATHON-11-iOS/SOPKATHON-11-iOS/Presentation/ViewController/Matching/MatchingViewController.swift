@@ -106,5 +106,9 @@ extension MatchingViewController: UICollectionViewDelegate, UICollectionViewData
         guard let cell = matchingCollectionView.dequeueReusableCell(withReuseIdentifier: MatchingCollectionViewCell.matchingIdentifier, for: indexPath) as? MatchingCollectionViewCell else { return UICollectionViewCell() }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Click Cell Number:" + String(indexPath.item))
+    }
 
 }
