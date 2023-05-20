@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func loadView() {
+        super.loadView()
+        
+        view = InputDataView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
