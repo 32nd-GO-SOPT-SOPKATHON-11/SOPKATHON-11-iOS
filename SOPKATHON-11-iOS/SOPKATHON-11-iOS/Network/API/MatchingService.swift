@@ -1,5 +1,5 @@
 //
-//  HomeService.swift
+//  MatchingSerivce.swift
 //  SOPKATHON-11-iOS
 //
 //  Created by 정채은 on 2023/05/21.
@@ -9,15 +9,15 @@ import Foundation
 
 import Alamofire
 
-final class HomeService {
+final class MatchingSerivce {
     
-    static let shared = HomeService()
+    static let shared = MatchingSerivce()
     
     private init() {}
     
     func home(completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        let url = Config.baseURL + "/user"
+        let url = Config.baseURL + "/user/matching"
         print(url)
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         
