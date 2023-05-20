@@ -55,8 +55,8 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         
         profileImageView.snp.makeConstraints{
             $0.top.equalToSuperview()
-            $0.width.equalTo(UIScreen.main.bounds.width/2)
-            $0.height.equalTo(250)
+            $0.width.height.equalTo(UIScreen.main.bounds.width/2)
+//            $0.height.equalTo(250)
         }
         
     }

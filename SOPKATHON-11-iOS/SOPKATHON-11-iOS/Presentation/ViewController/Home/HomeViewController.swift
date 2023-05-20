@@ -16,6 +16,11 @@ final class HomeViewController: UIViewController {
         $0.text = "마음에 드는 상대를 선택해보세요!"
     }
     
+    lazy var flowLayout = UICollectionViewFlowLayout().then {
+        $0.scrollDirection = .vertical
+        
+    }
+    
     lazy var homeCollectionView = UICollectionView(frame: .zero,
                                                    collectionViewLayout: flowLayout).then{
         $0.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.homeIdentifier)
@@ -26,11 +31,6 @@ final class HomeViewController: UIViewController {
         $0.backgroundColor = .clear
     }
     
-    lazy var flowLayout = UICollectionViewFlowLayout().then {
-        $0.scrollDirection = .vertical
-        
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,18 +63,17 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 9
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 50
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width - 20) / 2, height: (UIScreen.main.bounds.width - 20) / 2)
-//        return CGSize(width: 100, height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -86,4 +85,5 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.homeIdentifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
         return cell
     }
+
 }
