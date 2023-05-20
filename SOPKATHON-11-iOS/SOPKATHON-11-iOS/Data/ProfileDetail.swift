@@ -21,7 +21,7 @@ struct ProfileDetail {
 extension ProfileDetail {
     static func profileDummy() -> [ProfileDetail] {
         return [
-            ProfileDetail(name: "고아라", age: 2001, local: "서울", isMarried: true, hasChild: true, hobby: ["스쿼시"], keyword: ["매력적인"])
+            ProfileDetail(name: "이영수", age: 1954, local: "서울", isMarried: true, hasChild: true, hobby: ["스쿼시"], keyword: ["매력적인"])
         ]
     }
 }

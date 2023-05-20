@@ -70,10 +70,10 @@ extension ProfileDetailView {
         
         navigationBar.do {
             $0.backgroundColor = .white
-            $0.setTitleBind(title: "천성우님의 프로필이에유")
+            $0.setTitleBind(title: "이영수님의 프로필이에유")
         }
         profileImage.do {
-            $0.image = UIImage(systemName: "house")
+            $0.kfSetImage(url: HomeViewController().dummyList[0].profileImage)
         }
         
         profileView.do {
@@ -95,7 +95,7 @@ extension ProfileDetailView {
         }
         
         profileMatchButton.do {
-            $0.setImage(UIImage(systemName: "heart"), for: .normal)
+            $0.setImage(UIImage(named: "connectFilled"), for: .normal)
             $0.setTitle("선택", for: .normal)
             $0.setTitleColor(.black, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 24)

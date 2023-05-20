@@ -171,8 +171,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Click Cell Number:" + String(indexPath.item))
         
-//        let profileDetailViewController = ProfileDetailViewController()
+        let profileDetailViewController = ProfileDetailViewController()
         
-//        self.navigationController?.pushViewController(profileDetailViewController, animated: true)
+        self.navigationController?.pushViewController(profileDetailViewController, animated: true)
     }
 }
