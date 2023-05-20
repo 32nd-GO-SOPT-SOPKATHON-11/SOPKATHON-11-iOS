@@ -60,6 +60,7 @@
 		C30F6D412A193A47003A119E /* MatchingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */; };
 		C30F6D472A196A48003A119E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D462A196A48003A119E /* Config.swift */; };
 		C30F6D492A196BF2003A119E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D482A196BF2003A119E /* Home.swift */; };
+		C30F6D4B2A196C47003A119E /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D4A2A196C47003A119E /* HomeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C30F6D462A196A48003A119E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C30F6D482A196BF2003A119E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C30F6D4A2A196C47003A119E /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				C30F6D482A196BF2003A119E /* Home.swift */,
+				C30F6D4A2A196C47003A119E /* HomeService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				25491B592A18FAEC00B16FA8 /* c.swift in Sources */,
 				C30F6D492A196BF2003A119E /* Home.swift in Sources */,
 				3E9C06B82A195ED8004624B4 /* UIFont+Extension.swift in Sources */,
+				C30F6D4B2A196C47003A119E /* HomeService.swift in Sources */,
 				3E9C06842A190BD3004624B4 /* ButtonSetView.swift in Sources */,
 				A4D7272B2A190F3D00A00E16 /* NavigationBarView.swift in Sources */,
 				25491B652A19171B00B16FA8 /* TabBarViewController.swift in Sources */,
