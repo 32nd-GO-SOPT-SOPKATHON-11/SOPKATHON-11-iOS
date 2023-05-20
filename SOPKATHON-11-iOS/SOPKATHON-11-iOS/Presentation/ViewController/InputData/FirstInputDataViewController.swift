@@ -14,6 +14,8 @@ final class FirstInputDataViewController: BaseViewController {
 
     // MARK: - Property
     
+    let regionData = ["서울", "부산", "인천", "대구", "대전", "광주", "울산", "세종", "강원", "경기", "경상", "전라", "충청"]
+    
     private let configuration: PHPickerConfiguration = {
         var configuration = PHPickerConfiguration()
         configuration.selectionLimit = 1
@@ -46,6 +48,8 @@ final class FirstInputDataViewController: BaseViewController {
     
     private func setDelegate() {
         picker.delegate = self
+        baseView.regionPickerView.delegate = self
+        baseView.regionPickerView.dataSource = self
     }
     
     private func setPHPickerAction() {
@@ -89,5 +93,28 @@ extension FirstInputDataViewController: PHPickerViewControllerDelegate {
         }
     }
     
+}
+
+
+extension FirstInputDataViewController: UIPickerViewDelegate {}
+
+extension FirstInputDataViewController: UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return regionData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return regionData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let region = regionData[row]
+        baseView.configRegion(to: region)
+    }
     
 }

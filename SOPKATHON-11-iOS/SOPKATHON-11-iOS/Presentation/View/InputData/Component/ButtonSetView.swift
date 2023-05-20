@@ -57,6 +57,7 @@ final class ButtonSetView: BaseView {
         leftButton.snp.makeConstraints {
             $0.leading.verticalEdges.equalToSuperview()
             $0.trailing.equalTo(self.snp.centerX).offset(-10)
+            $0.height.equalTo(42)
         }
         
         addSubviews(rightButton)
@@ -64,10 +65,16 @@ final class ButtonSetView: BaseView {
             // TODO: 간격 조정
             $0.leading.equalTo(self.snp.centerX).offset(10)
             $0.trailing.verticalEdges.equalToSuperview()
+            $0.height.equalTo(42)
         }
     }
     
     // MARK: Custom Function
+    
+    func setButtonTitles(_ left: String, _ right: String) {
+        leftButton.setTitle(left, for: .normal)
+        rightButton.setTitle(right, for: .normal)
+    }
     
     private func configureButtons() {
         leftButton.backgroundColor = isLeftChosen ? .black : .gray
