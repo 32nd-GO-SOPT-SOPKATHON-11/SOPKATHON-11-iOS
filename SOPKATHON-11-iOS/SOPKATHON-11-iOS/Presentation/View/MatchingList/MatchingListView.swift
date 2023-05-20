@@ -15,19 +15,21 @@ class MatchingListView: UIView{
     // MARK: Component
     
     private let profileImage = UIImageView().then{
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "Listprofile")
     }
     
     private let profileName = UILabel().then{
-        $0.text = "여민서"
+        $0.text = "천성우"
+        $0.font = .semibold28
     }
     
     private let bornYear = UILabel().then{
-        $0.text = "1958년생"
+        $0.text = "1954년생"
+        $0.font = .regular28
     }
     
     private let verticalWall = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .gray
     }
     
     // MARK: - Initialization
@@ -55,8 +57,8 @@ class MatchingListView: UIView{
         profileImage.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(68)
-            $0.width.equalTo(200)
-            $0.height.equalTo(200)
+            $0.width.equalTo(199)
+            $0.height.equalTo(199)
         }
         
         profileName.snp.makeConstraints{

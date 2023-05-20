@@ -14,9 +14,9 @@ struct Mission {
 }
 
 let missionList = [
-    Mission(missionIamge: "shippingbox", missionName: "미션임시이름1"),
-    Mission(missionIamge: "shippingbox", missionName: "미션임시이름2"),
-    Mission(missionIamge: "shippingbox", missionName: "미션임시이름3"),
-    Mission(missionIamge: "shippingbox", missionName: "미션임시이름4"),
-    Mission(missionIamge: "shippingbox", missionName: "미션임시이름5"),
+    Mission(missionIamge: "picture", missionName: "같이 사진찍기"),
+    Mission(missionIamge: "talk", missionName: "젊은 시절에 대해 말해보기"),
+    Mission(missionIamge: "visit", missionName: "추억의 장소 함께 방문하기"),
+    Mission(missionIamge: "walk", missionName: "30분 산책하기"),
+    Mission(missionIamge: "withhobby", missionName: "서로의 취미 즐겨보기"),
 ]
