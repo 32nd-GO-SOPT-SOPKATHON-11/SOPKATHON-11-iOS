@@ -26,11 +26,11 @@ class TabBarViewController: UITabBarController{
         hiddenNavigationBar()
     }
     
-    // MARK: - Methods
+    // MARK: - Function
 
     private func setStyle() {
         self.tabBar.backgroundColor = .white
-        self.tabBar.tintColor = .black
+        self.tabBar.tintColor = .pink1
         self.tabBar.unselectedItemTintColor = .gray
         /// tintColor, selected Color set
         /// unselectedItemTintColor, unselected Color set
@@ -38,17 +38,18 @@ class TabBarViewController: UITabBarController{
 
     private func setViewController() {
 
-        let homeViewController = ViewController()
+        let homeViewController = HomeViewController()
         homeViewController.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
         homeNavigationController.setNavigationBarHidden(true, animated: true)
 
-        let matchinglistViewController = UIViewController()
-        matchinglistViewController.view.backgroundColor = .gray
-        matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "list.clipboard"), tag: 1)
+//        let matchinglistViewController = MatchingListViewController()
+//        matchinglistViewController.view.backgroundColor = .gray
+        
+        let matchinglistViewController = MatchingViewController()
+        matchinglistViewController.view.backgroundColor = .white
+        matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "heart.fill"), tag: 1)
         let matchinglistNavigationController = UINavigationController(rootViewController: matchinglistViewController)
-
-
 
         viewControllers = [homeNavigationController,
                            matchinglistNavigationController]
