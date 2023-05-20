@@ -26,7 +26,7 @@ enum ImageLiteral {
     static let homeFilled = UIImage.load(name: "homeFilled")
     static let profile = UIImage.load(name: "profile")
     static let progressbar1 = UIImage.load(name: "progressbar1")
-    static let progressbar2 = UIImage.load(name: "progressbar2")
+    static let progressbar2 = UIImage.load(name: "progressBar2")
 }
 
 extension UIImage {

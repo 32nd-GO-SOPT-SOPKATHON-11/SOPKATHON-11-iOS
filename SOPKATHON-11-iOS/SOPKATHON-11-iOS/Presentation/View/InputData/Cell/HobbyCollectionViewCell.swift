@@ -13,24 +13,41 @@ final class HobbyCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Property
     
-    static let identifer = "HobbyCollectionViewCell"
+    static let identifier = "HobbyCollectionViewCell"
+    
+    override var isSelected: Bool {
+        didSet {
+            toggleCell()
+        }
+    }
     
     // MARK: - UI Property
     
     private let hobbyImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: "person"))
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    private let hobbyButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .black.withAlphaComponent(0.68)
-        return button
+    private let hobbyLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .regular17
+        return label
     }()
     
     // MARK: - Life Cycle
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setLayout()
+    }
     
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Setting
     
@@ -40,9 +57,9 @@ final class HobbyCollectionViewCell: UICollectionViewCell {
             $0.edges.equalToSuperview()
         }
         
-        contentView.addSubview(hobbyButton)
-        hobbyButton.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        addSubview(hobbyLabel)
+        hobbyLabel.snp.makeConstraints {
+            $0.center.equalTo(hobbyImageView)
         }
     }
     
@@ -52,6 +69,17 @@ final class HobbyCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Custom Method
     
+    func configureCell(with image: UIImage, and title: String) {
+        hobbyImageView.image = image
+        hobbyLabel.text = title
+    }
     
+    private func toggleCell() {
+        if isSelected {
+            hobbyLabel.textColor = .pink1
+        } else {
+            hobbyLabel.textColor = .white
+        }
+    }
     
 }

@@ -39,7 +39,8 @@ extension NavigationBarView {
     func setUI() {
         
         navigationBackButton.do {
-            $0.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+            $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+            $0.tintColor = .black
         }
         
         navigationTitle.do {
