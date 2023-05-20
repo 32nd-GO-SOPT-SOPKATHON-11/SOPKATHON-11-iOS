@@ -21,7 +21,6 @@
 		251DD5AD2A15262F005951B8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 251DD5AC2A15262F005951B8 /* Kingfisher */; };
 		251DD5AF2A152714005951B8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DD5AE2A152714005951B8 /* BaseViewController.swift */; };
 		251DD5B12A152725005951B8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DD5B02A152725005951B8 /* BaseView.swift */; };
-		25491B552A18FAE200B16FA8 /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B542A18FAE200B16FA8 /* a.swift */; };
 		25491B592A18FAEC00B16FA8 /* c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B582A18FAEC00B16FA8 /* c.swift */; };
 		25491B5B2A18FAF100B16FA8 /* d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B5A2A18FAF100B16FA8 /* d.swift */; };
 		25491B5D2A18FAF500B16FA8 /* e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B5C2A18FAF500B16FA8 /* e.swift */; };
@@ -60,6 +59,7 @@
 		C30F6D3D2A193662003A119E /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D3C2A193662003A119E /* MatchingViewController.swift */; };
 		C30F6D412A193A47003A119E /* MatchingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */; };
 		C30F6D472A196A48003A119E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D462A196A48003A119E /* Config.swift */; };
+		C30F6D492A196BF2003A119E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D482A196BF2003A119E /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +75,6 @@
 		251DD5A92A1525EC005951B8 /* UIImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extention.swift"; sourceTree = "<group>"; };
 		251DD5AE2A152714005951B8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		251DD5B02A152725005951B8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		25491B542A18FAE200B16FA8 /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
 		25491B582A18FAEC00B16FA8 /* c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c.swift; sourceTree = "<group>"; };
 		25491B5A2A18FAF100B16FA8 /* d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d.swift; sourceTree = "<group>"; };
 		25491B5C2A18FAF500B16FA8 /* e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e.swift; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		C30F6D3C2A193662003A119E /* MatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
 		C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C30F6D462A196A48003A119E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C30F6D482A196BF2003A119E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,7 +312,7 @@
 		251DD5962A1522A4005951B8 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				25491B542A18FAE200B16FA8 /* a.swift */,
+				C30F6D482A196BF2003A119E /* Home.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -546,9 +546,9 @@
 				251DD5AF2A152714005951B8 /* BaseViewController.swift in Sources */,
 				25491B5F2A18FAFE00B16FA8 /* f.swift in Sources */,
 				25491B592A18FAEC00B16FA8 /* c.swift in Sources */,
+				C30F6D492A196BF2003A119E /* Home.swift in Sources */,
 				3E9C06B82A195ED8004624B4 /* UIFont+Extension.swift in Sources */,
 				3E9C06842A190BD3004624B4 /* ButtonSetView.swift in Sources */,
-				25491B552A18FAE200B16FA8 /* a.swift in Sources */,
 				A4D7272B2A190F3D00A00E16 /* NavigationBarView.swift in Sources */,
 				25491B652A19171B00B16FA8 /* TabBarViewController.swift in Sources */,
 				25491B782A192F1800B16FA8 /* MatchingListViewController.swift in Sources */,
