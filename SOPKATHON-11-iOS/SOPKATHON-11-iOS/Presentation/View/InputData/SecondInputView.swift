@@ -27,10 +27,22 @@ final class SecondInputView: BaseView {
     
     private let characterView = UIImageView(image: ImageLiteral.character)
     
+    private let kidsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "자녀 유무"
+        return label
+    }()
+    
     private let kidsButtonView: ButtonSetView = {
         let view = ButtonSetView()
         view.setButtonTitles("있음", "없음")
         return view
+    }()
+    
+    private let hasBeenMarriedLabel: UILabel = {
+        let label = UILabel()
+        label.text = "돌싱 여부"
+        return label
     }()
     
     private let hasBeenMarriedButtonView: ButtonSetView = {
@@ -108,8 +120,8 @@ final class SecondInputView: BaseView {
         contentView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.horizontalEdges.bottom.equalToSuperview()
-//            $0.height.greaterThanOrEqualTo(snp.height).priority(.low)
-            $0.height.equalTo(scrollView.frameLayoutGuide).priority(.low)
+            $0.height.greaterThanOrEqualTo(snp.height).priority(.low)
+//            $0.height.equalTo(scrollView.frameLayoutGuide).priority(.low)
             $0.width.equalTo(scrollView.frameLayoutGuide)
         }
         
@@ -127,15 +139,27 @@ final class SecondInputView: BaseView {
             $0.width.height.equalTo(90)
         }
         
-        contentView.addSubview(kidsButtonView)
-        kidsButtonView.snp.makeConstraints {
+        contentView.addSubview(kidsLabel)
+        kidsLabel.snp.makeConstraints {
             $0.top.equalTo(progressBarView.snp.bottom).offset(54)
             $0.horizontalEdges.equalToSuperview().inset(20)
         }
         
+        contentView.addSubview(kidsButtonView)
+        kidsButtonView.snp.makeConstraints {
+            $0.top.equalTo(kidsLabel.snp.bottom).offset(10)
+            $0.horizontalEdges.equalToSuperview().inset(20)
+        }
+        
+        contentView.addSubview(hasBeenMarriedLabel)
+        hasBeenMarriedLabel.snp.makeConstraints {
+            $0.top.equalTo(kidsButtonView.snp.bottom).offset(25)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+        }
+        
         contentView.addSubview(hasBeenMarriedButtonView)
         hasBeenMarriedButtonView.snp.makeConstraints {
-            $0.top.equalTo(kidsButtonView.snp.bottom).offset(25)
+            $0.top.equalTo(hasBeenMarriedLabel.snp.bottom).offset(10)
             $0.horizontalEdges.equalToSuperview().inset(20)
         }
         
@@ -169,7 +193,7 @@ final class SecondInputView: BaseView {
             $0.top.equalTo(personalityCollectionView.snp.bottom).offset(36)
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(83)
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(42)
         }
         
     }
