@@ -9,17 +9,20 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 class MatchingListView: UIView{
     
     // MARK: Component
     
-    private let profileImage = UIImageView().then{
-        $0.image = UIImage(named: "Listprofile")
+    private lazy var profileImage = UIImageView().then{
+        $0.kfSetImage(url: HomeViewController().dummyList[0].profileImage)
+        $0.layer.cornerRadius = self.frame.width / 2
+        $0.layer.masksToBounds = true
     }
     
     private let profileName = UILabel().then{
-        $0.text = "천성우"
+        $0.text = "이영수"
         $0.font = .semibold28
     }
     
