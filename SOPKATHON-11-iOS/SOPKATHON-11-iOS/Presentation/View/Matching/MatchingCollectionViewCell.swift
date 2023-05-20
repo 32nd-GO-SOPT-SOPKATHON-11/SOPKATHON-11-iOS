@@ -15,14 +15,25 @@ final class MatchingCollectionViewCell: UICollectionViewCell {
     static let matchingIdentifier = "MatchingCollectionViewCell"
     
     let profileImageView = UIImageView().then {
-        $0.image = UIImage(systemName: "figure.bowling")
+//        $0.image = UIImage(systemName: "figure.bowling")
+        $0.backgroundColor = .gray
+        $0.layer.cornerRadius = 6
+        $0.clipsToBounds = true
     }
     
-    let nameLabel = UILabel()
+    let nameLabel = UILabel().then {
+        $0.text = "천성우"
+        $0.font = .boldSystemFont(ofSize: 20)
+    }
     
-    let separateView = UIView()
+    let separateView = UIView().then {
+        $0.backgroundColor = .gray
+    }
     
-    let bornLabel = UILabel()
+    let bornLabel = UILabel().then {
+        $0.text = "1954년생"
+        $0.font = .systemFont(ofSize: 20)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,14 +60,33 @@ final class MatchingCollectionViewCell: UICollectionViewCell {
         )
         
         self.snp.makeConstraints {
-            $0.width.equalTo(UIScreen.main.bounds.size.width / 2)
-            $0.height.equalTo(250)
+            $0.width.equalTo(162)
+            $0.height.equalTo(254)
         }
         
         profileImageView.snp.makeConstraints{
             $0.top.equalToSuperview()
-            $0.width.height.equalTo(UIScreen.main.bounds.width/2)
+            $0.height.equalTo(220)
+            $0.width.equalTo(162)
+//            $0.width.height.equalTo(UIScreen.main.bounds.width/2)
 //            $0.height.equalTo(250)
+        }
+        
+        nameLabel.snp.makeConstraints{
+            $0.top.equalTo(profileImageView.snp.bottom).offset(10)
+            $0.leading.equalToSuperview().offset(7)
+        }
+        
+        separateView.snp.makeConstraints{
+            $0.top.equalTo(profileImageView.snp.bottom).offset(10)
+            $0.height.equalTo(24)
+            $0.width.equalTo(1)
+            $0.leading.equalTo(nameLabel.snp.trailing).offset(11)
+        }
+        
+        bornLabel.snp.makeConstraints{
+            $0.top.equalTo(nameLabel)
+            $0.trailing.equalToSuperview().inset(5)
         }
         
     }
