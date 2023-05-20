@@ -38,12 +38,12 @@ class TabBarViewController: UITabBarController{
 
     private func setViewController() {
 
-        let homeViewController = ViewController()
+        let homeViewController = HomeViewController()
         homeViewController.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
         homeNavigationController.setNavigationBarHidden(true, animated: true)
 
-        let matchinglistViewController = UIViewController()
+        let matchinglistViewController = MatchingViewController()
         matchinglistViewController.view.backgroundColor = .gray
         matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "list.clipboard"), tag: 1)
         let matchinglistNavigationController = UINavigationController(rootViewController: matchinglistViewController)
