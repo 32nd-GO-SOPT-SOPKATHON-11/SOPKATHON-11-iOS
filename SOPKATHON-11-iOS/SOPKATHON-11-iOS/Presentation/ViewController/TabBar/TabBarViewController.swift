@@ -26,7 +26,7 @@ class TabBarViewController: UITabBarController{
         hiddenNavigationBar()
     }
     
-    // MARK: - Methods
+    // MARK: - Function
 
     private func setStyle() {
         self.tabBar.backgroundColor = .white
@@ -43,12 +43,10 @@ class TabBarViewController: UITabBarController{
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
         homeNavigationController.setNavigationBarHidden(true, animated: true)
 
-        let matchinglistViewController = UIViewController()
+        let matchinglistViewController = MatchingListViewController()
         matchinglistViewController.view.backgroundColor = .gray
         matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "list.clipboard"), tag: 1)
         let matchinglistNavigationController = UINavigationController(rootViewController: matchinglistViewController)
-
-
 
         viewControllers = [homeNavigationController,
                            matchinglistNavigationController]
