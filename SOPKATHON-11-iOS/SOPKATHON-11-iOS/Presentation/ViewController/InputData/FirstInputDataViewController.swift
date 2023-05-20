@@ -42,6 +42,7 @@ final class FirstInputDataViewController: BaseViewController {
         
         setDelegate()
         setPHPickerAction()
+        
     }
     
     // MARK: - Setting
@@ -64,9 +65,6 @@ final class FirstInputDataViewController: BaseViewController {
     private func presentPHPicker() {
         self.present(picker, animated: true)
     }
-    
-    // MARK: - Custom Method
-
     
 }
 
