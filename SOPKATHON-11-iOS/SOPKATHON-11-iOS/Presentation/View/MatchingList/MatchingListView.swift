@@ -23,12 +23,12 @@ class MatchingListView: UIView{
     
     private let profileName = UILabel().then{
         $0.text = "이영수"
-        $0.font = .semibold28
+        $0.font = .boldSystemFont(ofSize: 28)
     }
     
     private let bornYear = UILabel().then{
         $0.text = "1954년생"
-        $0.font = .regular28
+        $0.font = .systemFont(ofSize: 28)
     }
     
     private let verticalWall = UIView().then {
