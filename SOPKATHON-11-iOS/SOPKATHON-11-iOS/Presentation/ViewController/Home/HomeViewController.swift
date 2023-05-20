@@ -13,8 +13,8 @@ import Then
 final class HomeViewController: UIViewController {
     
     private let titleLabel = UILabel().then {
-        $0.text = "마음에 드는 상대를\n선택해보세요!"
-        $0.numberOfLines = 2
+        $0.text = "누가 마음에 쏙 들어왔슈?"
+        $0.font = .systemFont(ofSize: 18)
     }
     
     lazy var logoImage = UIImageView().then {
@@ -55,20 +55,21 @@ extension HomeViewController {
         homeCollectionView)
         
         titleLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(100)
             $0.leading.equalToSuperview().offset(20)
         }
         
         logoImage.snp.makeConstraints{
-            $0.top.equalTo(titleLabel)
-            $0.height.width.equalTo(50)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.top.equalToSuperview().offset(55)
+            $0.height.width.equalTo(90)
+            $0.trailing.equalToSuperview().inset(22)
         }
         
         homeCollectionView.snp.makeConstraints{
-            $0.top.equalTo(titleLabel.snp.bottom).offset(50)
-            $0.width.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.top.equalTo(titleLabel.snp.bottom).offset(35)
+            $0.leading.trailing.equalToSuperview().inset(20)
+//            $0.width.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(83)
             $0.centerX.equalToSuperview()
         }
     }
@@ -76,19 +77,19 @@ extension HomeViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return 11
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 50
+        return 22
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width - 20) / 2, height: (UIScreen.main.bounds.width - 20) / 2)
+        return CGSize(width: 162, height: 254)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 11
         
     }
     
