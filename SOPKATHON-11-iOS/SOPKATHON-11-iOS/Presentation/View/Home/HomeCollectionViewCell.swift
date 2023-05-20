@@ -21,7 +21,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         $0.clipsToBounds = true
     }
     
-    let nameLabel = UILabel().then {
+    lazy var nameLabel = UILabel().then {
         $0.text = "천성우"
         $0.font = .boldSystemFont(ofSize: 20)
     }
@@ -30,7 +30,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         $0.backgroundColor = .gray
     }
     
-    let bornLabel = UILabel().then {
+    lazy var bornLabel = UILabel().then {
         $0.text = "1954년생"
         $0.font = .systemFont(ofSize: 20)
     }
@@ -89,5 +89,10 @@ final class HomeCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalToSuperview().inset(5)
         }
         
+    }
+    
+    func configureHomeCell(_ index: Int) {
+//        nameLabel.text = HomeViewController().homeList.data[index].name
+//        bornLabel.text = String(HomeViewController().homeList.data[index].age) + "년생"
     }
 }
