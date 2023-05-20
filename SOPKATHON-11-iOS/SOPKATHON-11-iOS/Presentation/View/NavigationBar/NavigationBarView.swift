@@ -38,11 +38,6 @@ final class NavigationBarView : UIView {
 extension NavigationBarView {
     func setUI() {
         
-        navigationBackButton.do {
-            $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-            $0.tintColor = .black
-        }
-        
         navigationTitle.do {
             $0.text = "프로필 보여드려유"
             $0.font = .boldSystemFont(ofSize: 20)
@@ -55,11 +50,7 @@ extension NavigationBarView {
     }
     
     func setLayout() {
-        navigationBackButton.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
-            $0.leading.equalToSuperview().inset(20)
-            $0.width.equalTo(30)
-        }
+        
         
         navigationTitle.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -69,6 +60,19 @@ extension NavigationBarView {
     
     func setTitleBind(title : String) {
         navigationTitle.text = title
+    }
+    
+    func addBackButton() {
+        navigationBackButton.do {
+            $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+            $0.tintColor = .black
+        }
+        
+        navigationBackButton.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.leading.equalToSuperview().inset(20)
+            $0.width.equalTo(30)
+        }
     }
 
 }

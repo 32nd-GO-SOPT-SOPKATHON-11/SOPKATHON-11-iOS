@@ -34,6 +34,8 @@ final class SecondInputDataViewController: BaseViewController {
         super.viewDidLoad()
         
         setDelegate()
+        setNavigationBar()
+        pushTabbarController()
     }
     
     // MARK: - Setting
@@ -52,8 +54,22 @@ final class SecondInputDataViewController: BaseViewController {
     
     // MARK: - Custom Method
     
+    func setNavigationBar() {
+        guard let navigationBar = navigationController?.navigationBar else { return }
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .clear
+        
+        navigationBar.standardAppearance = appearance
+        navigationBar.compactAppearance = appearance
+        navigationBar.scrollEdgeAppearance = appearance
+    }
     
-    
+    func pushTabbarController() {
+        let action = UIAction { [weak self] _ in
+            self?.navigationController?.pushViewController(TabBarViewController(), animated: true)
+        }
+        baseView.completeButton.addAction(action, for: .touchUpInside)
+    }
     
 }
 

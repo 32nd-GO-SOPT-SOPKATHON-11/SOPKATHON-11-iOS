@@ -21,12 +21,16 @@ final class FirstInputView: BaseView {
     
     // MARK: - UI Property
     
+    private let navigation = NavigationBarView()
+    
+    private let progressBarView = UIImageView(image: ImageLiteral.progressbar1)
+    
+    private let characterView = UIImageView(image: ImageLiteral.character)
+    
     private let profileImageButton: UIButton = {
         let button = UIButton()
-        button.setCornerRadius(to: 76)
-        button.setImage(UIImage(named: "person"), for: .normal)
-        button.tintColor = .black
-        button.backgroundColor = .black
+        button.setCornerRadius(to: 50)
+        button.setImage(ImageLiteral.profile, for: .normal)
         return button
     }()
     
@@ -66,11 +70,10 @@ final class FirstInputView: BaseView {
     
     let regionPickerView = UIPickerView()
     
-    private let nextButton: UIButton = {
+    let nextButton: UIButton = {
         let button = UIButton()
         button.setTitle("다음", for: .normal)
-        button.backgroundColor = .gray
-        // TODO: action 추가
+        button.backgroundColor = .darkBrown1
         return button
     }()
     
@@ -85,9 +88,30 @@ final class FirstInputView: BaseView {
     // MARK: - Setting
     
     override func setLayout() {
+        addSubview(navigation)
+        navigation.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.height.equalTo(44)
+            $0.horizontalEdges.equalToSuperview()
+        }
+        
+        addSubview(progressBarView)
+        progressBarView.snp.makeConstraints {
+            $0.top.equalTo(navigation.snp.bottom).offset(10)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(36)
+        }
+        
+        addSubview(characterView)
+        characterView.snp.makeConstraints {
+            $0.centerY.equalTo(progressBarView)
+            $0.leading.equalToSuperview().inset(16)
+            $0.width.height.equalTo(90)
+        }
+        
         addSubview(profileImageButton)
         profileImageButton.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide).offset(113)
+            $0.top.equalTo(progressBarView.snp.bottom).offset(29)
             $0.centerX.equalToSuperview()
             $0.width.height.equalTo(152)
         }

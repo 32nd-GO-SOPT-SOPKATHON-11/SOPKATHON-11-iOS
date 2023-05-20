@@ -24,6 +24,7 @@ final class TextfieldWithLabelView: BaseView {
         // TODO: font size 변경
         textField.setBorder(color: .gray, andWidth: 1)
         textField.setLeftPaddingPoints(8)
+        textField.setCornerRadius(to: 4)
         return textField
     }()
     

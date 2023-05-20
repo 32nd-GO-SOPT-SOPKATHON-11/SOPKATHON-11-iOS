@@ -77,7 +77,7 @@ final class SecondInputView: BaseView {
         return collectionView
     }()
     
-    private let completeButton: UIButton = {
+    let completeButton: UIButton = {
         let button = UIButton()
         button.setTitle("완료", for: .normal)
         button.backgroundColor = .darkBrown1
@@ -106,7 +106,8 @@ final class SecondInputView: BaseView {
         
         scrollView.addSubview(contentView)
         contentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview().offset(10)
+            $0.horizontalEdges.bottom.equalToSuperview()
 //            $0.height.greaterThanOrEqualTo(snp.height).priority(.low)
             $0.height.equalTo(scrollView.frameLayoutGuide).priority(.low)
             $0.width.equalTo(scrollView.frameLayoutGuide)
@@ -174,7 +175,7 @@ final class SecondInputView: BaseView {
     }
     
     override func setStyle() {
-        backgroundColor = .white
+        backgroundColor = .darkBrown1
     }
     
     // MARK: - Action Helper
