@@ -9,6 +9,7 @@ import UIKit
 
 enum ImageLiteral {
     static let character = UIImage.load(name: "character")
+    static let characterReversed = UIImage.load(name: "characterReversed")
     
     static let connect = UIImage.load(name: "connect")
     static let connectFilled = UIImage.load(name: "connectFilled")
