@@ -27,6 +27,10 @@
 		25491B5F2A18FAFE00B16FA8 /* f.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B5E2A18FAFE00B16FA8 /* f.swift */; };
 		25491B612A18FB0800B16FA8 /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B602A18FB0800B16FA8 /* g.swift */; };
 		25491B652A19171B00B16FA8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B642A19171B00B16FA8 /* TabBarViewController.swift */; };
+		A45E93BF2A192FAE0062E313 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E93BE2A192FAE0062E313 /* ProfileDetailView.swift */; };
+		A45E93C22A1935380062E313 /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E93C12A1935380062E313 /* ProfileDetail.swift */; };
+		A45E93C42A1939B40062E313 /* ProfileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E93C32A1939B40062E313 /* ProfileDetailTableViewCell.swift */; };
+		A45E93C72A1940510062E313 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E93C62A1940510062E313 /* ProfileDetailViewController.swift */; };
 		25491B752A192F0600B16FA8 /* MatchingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B742A192F0600B16FA8 /* MatchingListView.swift */; };
 		25491B782A192F1800B16FA8 /* MatchingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B772A192F1800B16FA8 /* MatchingListViewController.swift */; };
 		25491B7A2A1930F500B16FA8 /* MatchingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B792A1930F500B16FA8 /* MatchingListTableViewCell.swift */; };
@@ -84,6 +88,10 @@
 		25491B5E2A18FAFE00B16FA8 /* f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f.swift; sourceTree = "<group>"; };
 		25491B602A18FB0800B16FA8 /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
 		25491B642A19171B00B16FA8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A45E93BE2A192FAE0062E313 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
+		A45E93C12A1935380062E313 /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
+		A45E93C32A1939B40062E313 /* ProfileDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A45E93C62A1940510062E313 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		25491B742A192F0600B16FA8 /* MatchingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingListView.swift; sourceTree = "<group>"; };
 		25491B772A192F1800B16FA8 /* MatchingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingListViewController.swift; sourceTree = "<group>"; };
 		25491B792A1930F500B16FA8 /* MatchingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingListTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 		251DD5722A1520C6005951B8 /* SOPKATHON-11-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A45E93C02A1935290062E313 /* Data */,
 				251DD58A2A15213D005951B8 /* Application */,
 				251DD5892A15213A005951B8 /* Network */,
 				251DD5872A152122005951B8 /* Global */,
@@ -211,6 +220,7 @@
 		251DD58C2A1521F5005951B8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A45E93C52A1940390062E313 /* ProfileDetail */,
 				3E9C067F2A190B78004624B4 /* InputData */,
 				A4D727302A19173500A00E16 /* NavigationBar */,
 				25491B6B2A1920E700B16FA8 /* MatchingList */,
@@ -224,6 +234,7 @@
 		251DD58D2A1521FA005951B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A45E93BD2A192F970062E313 /* ProfileDetail */,
 				25491B732A192EFC00B16FA8 /* MatchingList */,
 				3E9C06802A190B86004624B4 /* InputData */,
 				A4D727292A190C0500A00E16 /* NavigationBar */,
@@ -348,6 +359,31 @@
 				25491B772A192F1800B16FA8 /* MatchingListViewController.swift */,
 			);
 			path = MatchingList;
+			sourceTree = "<group>";
+		};
+		A45E93BD2A192F970062E313 /* ProfileDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A45E93BE2A192FAE0062E313 /* ProfileDetailView.swift */,
+				A45E93C32A1939B40062E313 /* ProfileDetailTableViewCell.swift */,
+			);
+			path = ProfileDetail;
+			sourceTree = "<group>";
+		};
+		A45E93C02A1935290062E313 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A45E93C12A1935380062E313 /* ProfileDetail.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A45E93C52A1940390062E313 /* ProfileDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A45E93C62A1940510062E313 /* ProfileDetailViewController.swift */,
+			);
+			path = ProfileDetail;
 			sourceTree = "<group>";
 		};
 		25491B732A192EFC00B16FA8 /* MatchingList */ = {
@@ -537,6 +573,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				251DD5A22A152393005951B8 /* UIViewController+Extension.swift in Sources */,
+				251DD5782A1520C6005951B8 /* ViewController.swift in Sources */,
+				A45E93BF2A192FAE0062E313 /* ProfileDetailView.swift in Sources */,
+				A45E93C42A1939B40062E313 /* ProfileDetailTableViewCell.swift in Sources */,
+				A45E93C72A1940510062E313 /* ProfileDetailViewController.swift in Sources */,
 				3E9C067E2A190B38004624B4 /* FirstInputDataViewController.swift in Sources */,
 				C30F6D372A19179D003A119E /* HomeViewController.swift in Sources */,
 				251DD5A62A15249C005951B8 /* UILabel+Extension.swift in Sources */,
@@ -575,6 +615,7 @@
 				3E9C06A42A195DD9004624B4 /* UIColor+Extension.swift in Sources */,
 				3E9C06882A191378004624B4 /* BasicCell.swift in Sources */,
 				251DD5A42A1523C3005951B8 /* UIView+Extension .swift in Sources */,
+				A45E93C22A1935380062E313 /* ProfileDetail.swift in Sources */,
 				251DD5A82A1525AD005951B8 /* NetworkResult.swift in Sources */,
 				3E9C06922A193942004624B4 /* TextfieldWithLabelView.swift in Sources */,
 			);

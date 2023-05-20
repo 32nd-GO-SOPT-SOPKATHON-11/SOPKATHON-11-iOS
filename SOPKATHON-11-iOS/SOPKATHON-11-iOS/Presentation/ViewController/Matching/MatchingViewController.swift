@@ -167,5 +167,6 @@ extension MatchingViewController: UICollectionViewDelegate, UICollectionViewData
             
             self.navigationController?.pushViewController(matchingListViewController, animated: true)
             self.navigationController?.navigationBar.isHidden = true
+            
         }
 }

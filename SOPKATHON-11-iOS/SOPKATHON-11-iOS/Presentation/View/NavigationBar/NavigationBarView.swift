@@ -38,9 +38,9 @@ final class NavigationBarView : UIView {
 extension NavigationBarView {
     func setUI() {
         
-        navigationBackButton.do {
-            $0.setImage(UIImage(systemName: "arrow.left"), for: .normal)
-        }
+//        navigationBackButton.do {
+//            $0.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+//        }
         
         navigationTitle.do {
             $0.text = "프로필 보여드려유"
