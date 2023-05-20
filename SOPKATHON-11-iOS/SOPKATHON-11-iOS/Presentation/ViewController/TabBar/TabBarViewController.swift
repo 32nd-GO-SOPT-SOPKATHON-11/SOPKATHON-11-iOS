@@ -43,10 +43,10 @@ class TabBarViewController: UITabBarController{
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
         homeNavigationController.setNavigationBarHidden(true, animated: true)
 
-        let matchinglistViewController = MatchingListViewController()
+//        let matchinglistViewController = MatchingListViewController()
 //        matchinglistViewController.view.backgroundColor = .gray
         
-//        let matchinglistViewController = MatchingViewController()
+        let matchinglistViewController = MatchingViewController()
         matchinglistViewController.view.backgroundColor = .white
         matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "heart.fill"), tag: 1)
         let matchinglistNavigationController = UINavigationController(rootViewController: matchinglistViewController)
