@@ -9,25 +9,30 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 class MatchingListView: UIView{
     
     // MARK: Component
     
-    private let profileImage = UIImageView().then{
-        $0.backgroundColor = .red
+    private lazy var profileImage = UIImageView().then{
+        $0.kfSetImage(url: HomeViewController().dummyList[0].profileImage)
+        $0.layer.cornerRadius = self.frame.width / 2
+        $0.layer.masksToBounds = true
     }
     
     private let profileName = UILabel().then{
-        $0.text = "여민서"
+        $0.text = "이영수"
+        $0.font = .boldSystemFont(ofSize: 28)
     }
     
     private let bornYear = UILabel().then{
-        $0.text = "1958년생"
+        $0.text = "1954년생"
+        $0.font = .systemFont(ofSize: 28)
     }
     
     private let verticalWall = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .gray
     }
     
     // MARK: - Initialization
@@ -55,8 +60,8 @@ class MatchingListView: UIView{
         profileImage.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(68)
-            $0.width.equalTo(200)
-            $0.height.equalTo(200)
+            $0.width.equalTo(199)
+            $0.height.equalTo(199)
         }
         
         profileName.snp.makeConstraints{
