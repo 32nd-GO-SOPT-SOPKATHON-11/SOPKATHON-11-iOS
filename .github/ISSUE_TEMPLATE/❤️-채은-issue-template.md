@@ -1,8 +1,8 @@
 ---
-name: "\U0001FA77 채은 issue template"
+name: "❤️ 채은 issue template"
 about: chaentopia의 새로운 이슈 추가
 title: "[Feat] description"
-labels: "\U0001FA77 채은"
+labels: "❤️ 채은"
 assignees: chaentopia
 
 ---
