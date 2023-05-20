@@ -25,7 +25,13 @@ final class HomeViewController: UIViewController {
     }
     
     lazy var logoImage = UIImageView().then {
-        $0.image = UIImage(systemName: "figure.fall.circle.fill")
+        $0.image = ImageLiteral.characterReversed
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 5
+        $0.layer.shadowOffset = CGSize(width: 0, height: 0)
+        $0.layer.shadowOpacity = 0.17
+        $0.layer.masksToBounds = false
+
     }
     
     lazy var flowLayout = UICollectionViewFlowLayout().then {
