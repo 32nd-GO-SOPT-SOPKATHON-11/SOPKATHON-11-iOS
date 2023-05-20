@@ -7,10 +7,22 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class MatchingViewController: UIViewController {
     
     private let titleLabel = UILabel().then {
-        $0.text = "마음에 드는 상대를 선택해보세요!"
+        $0.text = "000님을 선택한 분들이에요!"
+    }
+    
+    private let matchingLabel = UILabel().then {
+        $0.text = "매칭인원"
+    }
+    
+    private var matchingCountLabel = UILabel().then {
+        $0.text = "4명"
+        $0.textColor = .gray
     }
     
     lazy var matchingFlowLayout = UICollectionViewFlowLayout().then {
@@ -44,11 +56,23 @@ extension MatchingViewController {
     private func setLayout() {
         view.addSubviews(
             titleLabel,
+            matchingLabel,
+            matchingCountLabel,
             matchingCollectionView)
         
         titleLabel.snp.makeConstraints{
             $0.top.equalToSuperview().offset(80)
             $0.centerX.equalToSuperview()
+        }
+        
+        matchingLabel.snp.makeConstraints{
+            $0.top.equalTo(titleLabel.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(20)
+        }
+        
+        matchingCountLabel.snp.makeConstraints{
+            $0.top.equalTo(matchingLabel)
+            $0.leading.equalTo(matchingLabel.snp.trailing).offset(20)
         }
         
         matchingCollectionView.snp.makeConstraints{
