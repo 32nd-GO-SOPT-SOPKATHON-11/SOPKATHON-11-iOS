@@ -17,16 +17,47 @@ final class SecondInputView: BaseView {
     
     // MARK: - UI Property
     
-    private let flowLayout: UICollectionViewFlowLayout = {
+    private let kidsButtonView: ButtonSetView = {
+        let view = ButtonSetView()
+        view.setButtonTitles("있음", "없음")
+        return view
+    }()
+    
+    private let hasBeenMarriedButtonView: ButtonSetView = {
+        let view = ButtonSetView()
+        view.setButtonTitles("해당", "없음")
+        return view
+    }()
+    
+    private let hobbyFlowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
+        
+        return layout
+    }()
+    
+    private let personalityFlowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        
         return layout
     }()
     
     lazy var hobbyCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: hobbyFlowLayout)
+        collectionView.register(HobbyCollectionViewCell.self, forCellWithReuseIdentifier: HobbyCollectionViewCell.identifer)
         collectionView.allowsMultipleSelection = true
-        collectionView.register(BasicCell.self, forCellWithReuseIdentifier: BasicCell.identifier)
         return collectionView
+    }()
+    
+    lazy var personalityCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: personalityFlowLayout)
+        collectionView.allowsMultipleSelection = true
+        return collectionView
+    }()
+    
+    private let completeButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("완료", for: .normal)
+        return button
     }()
     
     // MARK: - Life Cycle
@@ -36,18 +67,11 @@ final class SecondInputView: BaseView {
     // MARK: - Setting
     
     override func setLayout() {
-//        addSubviews(buttonSetView)
-//        buttonSetView.snp.makeConstraints {
-//            $0.horizontalEdges.equalToSuperview().inset(Size.sidePadding)
-//            $0.top.equalTo(safeAreaLayoutGuide)
-//        }
-//
-//        addSubviews(hobbyCollectionView)
-//        hobbyCollectionView.snp.makeConstraints {
-//            $0.top.equalTo(buttonSetView.snp.bottom).offset(10)
-//            $0.horizontalEdges.equalToSuperview().inset(Size.sidePadding)
-//            $0.bottom.equalToSuperview()
-//        }
+        addSubview(completeButton)
+        completeButton.snp.makeConstraints {
+            $0.bottom.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(83)
+        }
     }
     
     override func setStyle() {

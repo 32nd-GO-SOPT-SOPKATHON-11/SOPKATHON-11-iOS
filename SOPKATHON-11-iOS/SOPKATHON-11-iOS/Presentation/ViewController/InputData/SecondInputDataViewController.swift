@@ -15,17 +15,35 @@ final class SecondInputDataViewController: BaseViewController {
     
     let hobbyList: [String] = ["등산하기", "등산", "등산하", "testtestsets", "testset", "test"]
     
+    let personalityList: [String] = ["활동적인", "지적인", "감성적인", "성실한", "솔직한", "사교적인"]
+    
     // MARK: - UI Property
     
-    
+    let baseView = SecondInputView()
     
     // MARK: - Life Cycle
     
+    override func loadView() {
+        super.loadView()
+        
+        view = baseView
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setDelegate()
+    }
     
     // MARK: - Setting
     
-    
+    private func setDelegate() {
+        baseView.hobbyCollectionView.delegate = self
+        baseView.hobbyCollectionView.dataSource = self
+        
+        baseView.personalityCollectionView.delegate = self
+        baseView.personalityCollectionView.dataSource = self
+    }
     
     // MARK: - Action Helper
     
@@ -49,11 +67,17 @@ extension SecondInputDataViewController: UICollectionViewDelegate {}
 extension SecondInputDataViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return hobbyList.count
+        if collectionView == baseView.hobbyCollectionView {
+            return hobbyList.count
+        } else if collectionView == baseView.personalityCollectionView {
+            return personalityList.count
+        } else {   
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as? BasicCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HobbyCollectionViewCell.identifier, for: indexPath) as? HobbyCollectionViewCell
         else { return UICollectionViewCell() }
         cell.configureCell(hobbyList[indexPath.row])
         return cell
