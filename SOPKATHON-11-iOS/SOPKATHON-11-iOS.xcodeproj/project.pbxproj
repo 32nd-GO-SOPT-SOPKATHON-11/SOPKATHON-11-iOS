@@ -29,7 +29,6 @@
 		25491B5D2A18FAF500B16FA8 /* e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B5C2A18FAF500B16FA8 /* e.swift */; };
 		25491B5F2A18FAFE00B16FA8 /* f.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B5E2A18FAFE00B16FA8 /* f.swift */; };
 		25491B612A18FB0800B16FA8 /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B602A18FB0800B16FA8 /* g.swift */; };
-		25491B632A18FB0C00B16FA8 /* h.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25491B622A18FB0C00B16FA8 /* h.swift */; };
 		3E9C067E2A190B38004624B4 /* FirstInputDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C067D2A190B38004624B4 /* FirstInputDataViewController.swift */; };
 		3E9C06822A190B8D004624B4 /* FirstInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C06812A190B8D004624B4 /* FirstInputView.swift */; };
 		3E9C06842A190BD3004624B4 /* ButtonSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C06832A190BD3004624B4 /* ButtonSetView.swift */; };
@@ -44,6 +43,7 @@
 		C30F6D372A19179D003A119E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D362A19179D003A119E /* HomeViewController.swift */; };
 		C30F6D3A2A191A87003A119E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D392A191A87003A119E /* HomeCollectionViewCell.swift */; };
 		C30F6D3D2A193662003A119E /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D3C2A193662003A119E /* MatchingViewController.swift */; };
+		C30F6D412A193A47003A119E /* MatchingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +67,6 @@
 		25491B5C2A18FAF500B16FA8 /* e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e.swift; sourceTree = "<group>"; };
 		25491B5E2A18FAFE00B16FA8 /* f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f.swift; sourceTree = "<group>"; };
 		25491B602A18FB0800B16FA8 /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
-		25491B622A18FB0C00B16FA8 /* h.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h.swift; sourceTree = "<group>"; };
 		3E9C067D2A190B38004624B4 /* FirstInputDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInputDataViewController.swift; sourceTree = "<group>"; };
 		3E9C06812A190B8D004624B4 /* FirstInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInputView.swift; sourceTree = "<group>"; };
 		3E9C06832A190BD3004624B4 /* ButtonSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetView.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		C30F6D362A19179D003A119E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C30F6D392A191A87003A119E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		C30F6D3C2A193662003A119E /* MatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
+		C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +189,7 @@
 			children = (
 				3E9C06802A190B86004624B4 /* InputData */,
 				A4D727292A190C0500A00E16 /* NavigationBar */,
-				25491B622A18FB0C00B16FA8 /* h.swift */,
+				C30F6D3F2A1939DF003A119E /* Matching */,
 				C30F6D3B2A191A8B003A119E /* Home */,
 			);
 			path = View;
@@ -372,6 +372,14 @@
 			path = Matching;
 			sourceTree = "<group>";
 		};
+		C30F6D3F2A1939DF003A119E /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				C30F6D402A193A47003A119E /* MatchingCollectionViewCell.swift */,
+			);
+			path = Matching;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,10 +470,10 @@
 				A4D7272F2A1916CB00A00E16 /* NavigationBarViewController.swift in Sources */,
 				251DD5AA2A1525EC005951B8 /* UIImageView+Extention.swift in Sources */,
 				25491B612A18FB0800B16FA8 /* g.swift in Sources */,
-				25491B632A18FB0C00B16FA8 /* h.swift in Sources */,
 				3E9C06902A1935B0004624B4 /* SecondInputDataViewController.swift in Sources */,
 				C30F6D3D2A193662003A119E /* MatchingViewController.swift in Sources */,
 				251DD5742A1520C6005951B8 /* AppDelegate.swift in Sources */,
+				C30F6D412A193A47003A119E /* MatchingCollectionViewCell.swift in Sources */,
 				25491B5B2A18FAF100B16FA8 /* d.swift in Sources */,
 				3E9C06962A1944F7004624B4 /* UITextField+Extension.swift in Sources */,
 				251DD5AF2A152714005951B8 /* BaseViewController.swift in Sources */,

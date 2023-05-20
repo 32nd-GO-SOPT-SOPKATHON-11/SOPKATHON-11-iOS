@@ -13,12 +13,16 @@ import Then
 final class HomeViewController: UIViewController {
     
     private let titleLabel = UILabel().then {
-        $0.text = "마음에 드는 상대를 선택해보세요!"
+        $0.text = "마음에 드는 상대를\n선택해보세요!"
+        $0.numberOfLines = 2
+    }
+    
+    lazy var logoImage = UIImageView().then {
+        $0.image = UIImage(systemName: "figure.fall.circle.fill")
     }
     
     lazy var flowLayout = UICollectionViewFlowLayout().then {
         $0.scrollDirection = .vertical
-        
     }
     
     lazy var homeCollectionView = UICollectionView(frame: .zero,
@@ -47,11 +51,18 @@ extension HomeViewController {
     private func setLayout() {
         view.addSubviews(
             titleLabel,
+            logoImage,
         homeCollectionView)
         
         titleLabel.snp.makeConstraints{
             $0.top.equalToSuperview().offset(80)
-            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().offset(20)
+        }
+        
+        logoImage.snp.makeConstraints{
+            $0.top.equalTo(titleLabel)
+            $0.height.width.equalTo(50)
+            $0.trailing.equalToSuperview().inset(20)
         }
         
         homeCollectionView.snp.makeConstraints{
@@ -85,5 +96,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.homeIdentifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Click Cell Number:" + String(indexPath.item))
+    }
 }

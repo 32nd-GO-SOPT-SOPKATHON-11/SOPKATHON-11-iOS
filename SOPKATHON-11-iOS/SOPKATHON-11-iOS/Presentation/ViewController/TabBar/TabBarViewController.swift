@@ -44,7 +44,7 @@ class TabBarViewController: UITabBarController{
         homeNavigationController.setNavigationBarHidden(true, animated: true)
 
         let matchinglistViewController = MatchingViewController()
-        matchinglistViewController.view.backgroundColor = .gray
+        matchinglistViewController.view.backgroundColor = .white
         matchinglistViewController.tabBarItem = UITabBarItem(title: "매칭 리스트", image: UIImage(systemName: "list.clipboard"), tag: 1)
         let matchinglistNavigationController = UINavigationController(rootViewController: matchinglistViewController)
 
